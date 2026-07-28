@@ -32,6 +32,6 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} .
-      - run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
-      - run: kubectl set image deployment/web-deployment web=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+      # - run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} .
+      # - run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+      # - run: kubectl set image deployment/web-deployment web=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
