@@ -6,5 +6,5 @@ test("GET / responde correctamente", () => {
   const response = getHomeResponse();
 
   assert.equal(response.status, 200);
-  assert.strictEqual(response.body, 'Aplicación lista');
+  assert.strictEqual(response.body, 'Aplicación lista, error controlado');
 });

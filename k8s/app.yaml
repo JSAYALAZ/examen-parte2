@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: web
-          image: app-ejemplo-evaluacion:latest
+          image: examen-app:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
 ---
